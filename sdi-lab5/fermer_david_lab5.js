@@ -15,21 +15,27 @@ var add = function(num1, num2)
 	return answer
 };
 
+var subtract = function(num1, num2)
+{
+	var answer = (num1 - num2);
+	return answer
+};
+
 
 //Main Code
 number1 = parseInt(prompt("Enter your first whole number:"));
 number2 = parseInt(prompt("Enter your second number:"));
 operation = prompt("What operation would you like to apply to the numbers?","add, subtract, multiply or divide");
 
-if (operation = "add")
+if (operation == "add")
 {
 	console.log("Your answer is " + add(number1,number2) + ".");
 }
-else if (operation = "subtract")
+else if (operation == "subtract")
 {
 	console.log("Your answer is " + subtract(number1,number2) + ".");
 }
-else if (operation = "multiply")
+else if (operation == "multiply")
 {
 	console.log("Your answer is " + multiply(number1,number2) + ".");
 }
