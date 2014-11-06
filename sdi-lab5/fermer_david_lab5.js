@@ -26,25 +26,35 @@ var multiply = function(num1, num2)
 	var answer = (num1 * num2)
 	return answer
 }
+var divide = function(num1,num2)
+{
+	var answer = (num1 / num2)
+	return answer
+}
 
 //Main Code
 number1 = parseInt(prompt("Enter your first whole number:"));
 number2 = parseInt(prompt("Enter your second number:"));
 operation = prompt("What operation would you like to apply to the numbers?","add, subtract, multiply or divide");
 
+if ((number2 == 0) && (operation = "divide"))
+	{
+		number2 = parseInt(prompt("You cannot divide a number by 0.  Please input a number besides 0."));
+	}
+
 if (operation == "add")
 {
-	console.log("Your answer is " + add(number1,number2) + ".");
+	console.log(number1 + " + " + number2 + " = " + add(number1,number2));
 }
 else if (operation == "subtract")
 {
-	console.log("Your answer is " + subtract(number1,number2) + ".");
+	console.log(number1 + " - " + number2 + " = " + subtract(number1,number2));
 }
 else if (operation == "multiply")
 {
-	console.log("Your answer is " + multiply(number1,number2) + ".");
+	console.log(number1 + " * " + number2 + " = " + multiply(number1,number2));
 }
 else if (operation == "divide")
 {
-	console.log("Your answer is " + divide(number1,number2) + ".");
+	console.log(number1 + " / " + number2 + " = " + divide(number1,number2));
 }
