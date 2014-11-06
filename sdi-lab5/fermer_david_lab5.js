@@ -21,6 +21,11 @@ var subtract = function(num1, num2)
 	return answer
 };
 
+var multiply = function(num1, num2)
+{
+	var answer = (num1 * num2)
+	return answer
+}
 
 //Main Code
 number1 = parseInt(prompt("Enter your first whole number:"));
@@ -39,7 +44,7 @@ else if (operation == "multiply")
 {
 	console.log("Your answer is " + multiply(number1,number2) + ".");
 }
-else
+else if (operation == "divide")
 {
 	console.log("Your answer is " + divide(number1,number2) + ".");
 }
