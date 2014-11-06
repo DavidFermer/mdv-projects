@@ -25,19 +25,19 @@ var multiply = function(num1, num2)
 {
 	var answer = (num1 * num2)
 	return answer
-}
+};
 var divide = function(num1,num2)
 {
 	var answer = (num1 / num2)
 	return answer
-}
+};
 
 //Main Code
 number1 = parseInt(prompt("Enter your first whole number:"));
 number2 = parseInt(prompt("Enter your second number:"));
 operation = prompt("What operation would you like to apply to the numbers?","add, subtract, multiply or divide");
 
-if ((number2 == 0) && (operation = "divide"))
+if ((number2 == 0) && (operation == "divide"))
 	{
 		number2 = parseInt(prompt("You cannot divide a number by 0.  Please input a number besides 0."));
 	}
