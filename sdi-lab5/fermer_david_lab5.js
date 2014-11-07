@@ -11,25 +11,25 @@ var answer;
 //Functions
 var add = function(num1, num2)
 {
-	var answer = (num1 + num2);
-	return answer
+	var add = (num1 + num2);
+	return add
 };
 
 var subtract = function(num1, num2)
 {
-	var answer = (num1 - num2);
-	return answer
+	var subtract = (num1 - num2);
+	return subtract
 };
 
 var multiply = function(num1, num2)
 {
-	var answer = (num1 * num2)
-	return answer
+	var multiply = (num1 * num2)
+	return multiply
 };
 var divide = function(num1,num2)
 {
-	var answer = (num1 / num2)
-	return answer
+	var divide = (num1 / num2)
+	return divide
 };
 
 //Main Code
@@ -57,7 +57,7 @@ else if (operation == "multiply")
 {
 	answer = multiply(number1,number2);
 }
-else if (operation == "divide")
+else
 {
 	answer = divide(number1,number2);
 }
