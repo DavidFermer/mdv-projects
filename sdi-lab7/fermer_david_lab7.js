@@ -29,3 +29,25 @@ var badGuyConstructor = function(npcType,npcHealth,npcWeapon,npcWeaponBaseDamage
 	
 	//console.log("the npc is now alive " + this.alive);
 };
+
+var badGuyCreation = function()
+{		
+	for (i = 0; i < 3; i++)
+	{
+		if (i == 0)
+		{
+			stormtrooper = new badGuyConstructor(characters.NPC[0].type, characters.NPC[0].health, characters.NPC[0].weapon, characters.NPC[0].baseWeaponDamage);
+			//console.log("This should be the stormtrooper");
+		}
+		else if (i == 1)
+		{
+			sentry = new  badGuyConstructor(characters.NPC[1].type, characters.NPC[1].health, characters.NPC[1].weapon, characters.NPC[1].baseWeaponDamage)	
+			//console.log("This should be the sentry");
+		}	
+		else
+		{
+			officer = new badGuyConstructor(characters.NPC[2].type, characters.NPC[2].health, characters.NPC[2].weapon, characters.NPC[2].baseWeaponDamage)	
+			//console.log("This should be the Imperial Officer")
+		}	
+	};
+};
