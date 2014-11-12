@@ -51,3 +51,13 @@ var badGuyCreation = function()
 		}	
 	};
 };
+
+//Main Code
+
+badGuyCreation();
+//console.log(stormtrooper);
+//console.log(sentry);
+//console.log(officer);
+console.log("Your team walks into the garage sees a " + stormtrooper.type + ", " + sentry.type + ", and an " + officer.type);
+console.log("The " + stormtrooper.type + " has a " + stormtrooper.weapon + ".  The " + officer.type + " has a " + officer.weapon + ".  While the " + sentry.type + " only has a " + sentry.weapon + ".");
+
