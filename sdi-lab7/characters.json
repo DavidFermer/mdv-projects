@@ -1,0 +1,26 @@
+//JSON Data file
+
+var characters = {
+
+	"NPC":
+		[
+			{
+			"type": 			"Stormtrooper",
+			"health":			8,
+			"weapon":			"Blaster Rifle",
+			"baseWeaponDamage":	5
+			},
+			{
+			"type": 			"Sentry",
+			"health":			4,
+			"weapon":			"Blaster pistol",
+			"baseWeaponDamage":	2
+			},
+			{
+			"type":				"Imperial Officer",
+			"health":			10,
+			"weapon":			"Blaster Rifle",
+			"baseWeaponDamage":	5
+			}
+		]
+}
