@@ -6,6 +6,8 @@
 var firstProblemAnswer;
 
 //Functions
+
+//problem 1
 var emailBooleanCheck = function(emailAddress)
 {
 	var firstAt			= emailAddress.indexOf("@");
@@ -37,13 +39,29 @@ var emailBooleanCheck = function(emailAddress)
 	{
 		return true;	
 	}
-
-
 };
 	
+//problem 2
+var listSeparatorChanger = function(list,firstSeparator,secondSeparator)
+{
+	console.log(list,firstSeparator,secondSeparator);
+	var listArray = list.split(",");
+	console.log(listArray);
+	var newList = "";
+	
+	for (i = 0; i < listArray.length; i++)
+	{
+		newList = newList + "/ " + listArray[i]
+	};
+	return newList
+};	
+
 
 //Main Code
 
-
+//problem 1
 var firstProblemAnswer = emailBooleanCheck("david.fermer@icloud.com")
 console.log(firstProblemAnswer) 
+
+//problem 2
+listSeparatorChanger("James, Bradley, Benjamin",",","/");
