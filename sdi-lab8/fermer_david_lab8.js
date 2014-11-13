@@ -8,7 +8,6 @@ var firstProblemAnswer;
 //Functions
 var emailBooleanCheck = function(emailAddress)
 {
-	var emailChecker 	= false;
 	var firstAt			= emailAddress.indexOf("@");
 	//console.log(firstAt);
 	var anyOtherAt		= emailAddress.indexOf("@", firstAt + 1)
