@@ -4,6 +4,7 @@
 
 //Globral Variables
 var firstProblemAnswer;
+var secondProblemAnswer;
 
 //Functions
 
@@ -44,24 +45,32 @@ var emailBooleanCheck = function(emailAddress)
 //problem 2
 var listSeparatorChanger = function(list,firstSeparator,secondSeparator)
 {
-	console.log(list,firstSeparator,secondSeparator);
-	var listArray = list.split(",");
-	console.log(listArray);
+	//console.log(list,firstSeparator,secondSeparator);
+	var listArray = list.split(firstSeparator);
+	//console.log(listArray);
 	var newList = "";
 	
 	for (i = 0; i < listArray.length; i++)
 	{
-		newList = newList + "/ " + listArray[i]
+		if (i == 0)
+		{
+			newList = listArray[i];
+		}
+		else
+		{
+			newList = newList + secondSeparator + " " + listArray[i];
+		}
 	};
-	return newList
+	return newList;
 };	
 
 
 //Main Code
 
 //problem 1
-var firstProblemAnswer = emailBooleanCheck("david.fermer@icloud.com")
-console.log(firstProblemAnswer) 
+firstProblemAnswer = emailBooleanCheck("david.fermer@icloud.com")
+console.log("It is " + firstProblemAnswer + " that you provided a correct email address.") 
 
 //problem 2
-listSeparatorChanger("James, Bradley, Benjamin",",","/");
+secondProblemAnswer = listSeparatorChanger("James/ Bradley/ Benjamin","/",",");
+console.log("My sons names are " + secondProblemAnswer + ".")
