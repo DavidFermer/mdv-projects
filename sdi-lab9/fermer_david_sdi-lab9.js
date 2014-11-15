@@ -61,19 +61,30 @@ var dateDifference = function(dateOne,dateTwo,choice)
 	{
 		if(choice == "hours")
 		{
-			if(dateOne > dateTwo)
+			if(dateTwo > dateOne)
 			{
 				return (convertedDateTwo - convertedDateOne)/1000/60/60
+			}
+			else
+			{
+				return(convertedDateOne - convertedDateTwo)/1000/60/60
 			}
 		}
 		else
 		{
-			return (convertedDateTwo - convertedDateOne)/1000/60/60/24
+			if(dateTwo > dateOne)
+			{
+				return (convertedDateTwo - convertedDateOne)/1000/60/60/24
+			}
+			else
+			{
+				return (convertedDateOne - convertedDateTwo)/1000/60/60/24
+			}
 		}
 	}
 	else
 	{
-		return"you did not choose hours or days correctly";
+		return"You did not choose hours or days correctly";
 	}
 };
 
@@ -98,8 +109,16 @@ answer2 = stringToNumber(myString);
 console.log("\"" + myString + "\"" + " entered as a string comes back as the number " + answer2 + " when it is passed through my function");
 
 //Problem 3
-date1 = "11/15/2014";
-date2 = "11/16/2014";
-choiceHoursDays = "hours"
+date1 = "11/16/2014";
+date2 = "11/15/2014";
+choiceHoursDays = "days"
 answer3 = dateDifference(date1, date2, choiceHoursDays);
-console.log(answer3);
+
+if(answer3 == "you did not choose hours or days correctly")
+{
+	console.log(answer3);
+}
+else
+{
+	console.log("There is " + answer3 + " " + choiceHoursDays + " between " + date1 + " and " + date2 + ".");
+}	
