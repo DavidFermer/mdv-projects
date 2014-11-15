@@ -14,7 +14,10 @@ var decimalNumber = 0;
 var answer2 = 0;
 var myString = "";
 //Problem 3
-
+var date1;
+var date2;
+var choiceHoursDays;
+var answer3 = 0;
 
 
 //functions
@@ -46,10 +49,33 @@ var stringToNumber = function(string)
 	{
 		return parseFloat(string);
 	}
-}
+};
 
 //Problem 3
-
+var dateDifference = function(dateOne,dateTwo,choice)
+{
+	var convertedDateOne = new Date(dateOne);
+	var convertedDateTwo = new Date(dateTwo);
+	
+	if(choice == "hours" || choice == "days")
+	{
+		if(choice == "hours")
+		{
+			if(dateOne > dateTwo)
+			{
+				return (convertedDateTwo - convertedDateOne)/1000/60/60
+			}
+		}
+		else
+		{
+			return (convertedDateTwo - convertedDateOne)/1000/60/60/24
+		}
+	}
+	else
+	{
+		return"you did not choose hours or days correctly";
+	}
+};
 
 
 //main code
@@ -72,3 +98,8 @@ answer2 = stringToNumber(myString);
 console.log("\"" + myString + "\"" + " entered as a string comes back as the number " + answer2 + " when it is passed through my function");
 
 //Problem 3
+date1 = "11/15/2014";
+date2 = "11/16/2014";
+choiceHoursDays = "hours"
+answer3 = dateDifference(date1, date2, choiceHoursDays);
+console.log(answer3);
