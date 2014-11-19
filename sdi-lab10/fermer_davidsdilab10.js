@@ -29,7 +29,7 @@ var multiples3and5 = function()
 
 
 //  Problem 2 Function
-var powerballGenerator = function()
+var lotteryGenerator = function()
 {
 	var lotteryNumbers = [];
 	var lotteryNumberStorage = 0;
@@ -57,7 +57,7 @@ answer1 = multiples3and5();
 console.log("The sum of all multiples of 3 and 5 below 1000 is " + answer1);
 
 //  Problem 2 Main Code
-answer2 = powerballGenerator()
+answer2 = lotteryGenerator()
 
 powerBall = answer2.pop();
 
